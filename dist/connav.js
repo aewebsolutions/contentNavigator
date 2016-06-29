@@ -510,7 +510,6 @@ function ContentNavigator(el, options){
         }else{
             self.closeCollapse(tableNode);
         }
-        self.el.trigger(prefix+'ToggleCollapse', tableNode)
     }
     
     this.openCollapse = function(tableNode){
