@@ -1,0 +1,70 @@
+//Navigator Content Jquery Plugin
+
+$connav : '.connav-';
+
+//Table of content
+#{$connav}table-content{
+    $item :  $connav + 'table-item';
+    $level : $connav + 'table-level-';
+    $title : $connav + 'table-item-title';
+    $text : $connav + 'table-item-text';
+    $index : $connav + 'table-item-index';
+    
+    #{$index}{
+        margin-right: 5px; 
+    }
+    #{$text}{
+        cursor: pointer;
+    }
+    .active > #{$title}{
+        //background: #ccc;
+    }
+    .active.focus > #{$title}{
+        //background: #ddd;
+    }
+    
+    #{$level+'1'}{
+        #{$title}{
+            
+        }
+    }
+    #{$item}{
+        position: relative;
+        
+        &.collapsed{
+            #{$item}{
+                display: none;
+            }
+        }
+    }
+    
+    //Btn collapse
+    #{$connav}btn-collapse{
+        display: inline-block;
+        width: 0.9em;
+        margin-left: -0.9em;
+        &:before{
+            content: "\25be";
+        }
+    }
+    .collapsed > #{$title} > #{$connav}btn-collapse:before{
+        content: "\25b8";
+    }
+    
+    // Add padding to all six levels
+    @for $i from 2 through 6{
+        #{$level+$i} #{$title}{
+            padding-left : ($i - 1) * 10 + px;
+        }
+    }
+    
+}
+
+//Blocks of content
+#{$connav}block{
+    $index : $connav + 'block-index';
+    
+    #{$index}{
+        margin-right: 10px; 
+    }
+}

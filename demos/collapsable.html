@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Content Navigator Demo: collapsable</title>
+        <meta name="description" content="Content Navigator is a Jquery plugin that generates a navigatable index from page contents. Here are a demo about collapsable option.">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../libs/jquery.js"></script>
+        <link rel="stylesheet" href="../dist/connav.css" type="text/css">
+        <script src="../dist/connav.js"></script>
+        <style>
+            body{
+                padding-bottom: 1600px
+            }
+            h2{
+                margin: 20px 0 0 0;
+            }
+            h3{
+                margin: 10px 0 0 0;
+            } 
+            h4{
+                margin: 10px 0 0 0;
+            }
+            h5{
+                margin: 10px 0 0 0;
+            }
+            
+            p{
+                margin: 0
+            }
+            pre{
+                margin: 0;
+                color : #555;
+            }
+            .nav {
+                padding: 20px;
+                border: 4px solid #ccc;
+            }
+            .container{
+                padding: 20px;
+                background: #eee;
+            }
+            
+            .title{
+                font-weight: bold;
+                margin: 10px 0 0 0;
+            }
+            
+            .connav-level-2, 
+            .connav-level-3,
+            .connav-level-4{
+                margin-left: 20px;
+            }
+
+            #demo1{
+                margin-left: 240px;
+            }
+            #navigator1{
+                position: fixed;
+                top:0; left: 0;
+                width: 180px;
+            }
+
+            body{position: relative;}
+            #copyright{
+                position: absolute;
+                bottom: 0;
+                right:0;
+                color: #ccc;
+                
+            }
+            #copyright a{
+                color: inherit;
+                text-decoration: none;
+            }
+       
+        </style>
+          
+        <script>
+            $(document).ready(function(){
+                $('#navigator1').contentNavigator({
+                    wrapper : '#demo1',
+                    collapsable : true,
+                    autocollapse : true,
+                    updateURL : true
+                });
+                
+
+            })
+            
+        </script>
+    </head>
+    <body>
+        <div class="demo" id="demo1">
+        <h1>Demo: Collapsable</h1>
+        <p>
+            Turning true collapsable option, navigator's nested titles will be easily hidden and shown. Also, if you turn autocollapse true, titles will be toggle visibility automatically when you scroll through page's contents.
+            <br>
+            If you like to use collapsable, navigator should be absolute or fixed positioned. Otherwise, toggling visibility would affect contents blocks' offset and neither links nor URL hash will be properly work. 
+            <br>
+            By default, collapse button is an arrow. Click on it to toggle visibility. Also, you can modify it through css or even you can change the original markup (see btnCollapse option) 
+        </p>
+        <!--Demo start-->
+
+<pre>
+<code>
+$('#navigator1').contentNavigator({
+    wrapper : '#demo1',
+    collapsable : true,
+    autocollapse : true,
+    updateURL : true
+});
+</code>
+</pre>
+
+        
+        <div class="container">
+            <div id="navigator1" class="nav"></div>
+            
+            <div class="connav-auto-block ">
+                <h2>First title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor tortor ac urna sodales, non egestas neque mattis. Vestibulum ut aliquam sem. Donec ante magna, laoreet vitae rhoncus ac, pulvinar quis massa. Nulla auctor vel ipsum in fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eu interdum augue, nec fermentum mauris. Nulla eget pretium dui. Sed vulputate pretium aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut interdum justo.
+                </p>
+                    <h3>First subtitle</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor tortor ac urna sodales, non egestas neque mattis. Vestibulum ut aliquam sem. Donec ante magna, laoreet vitae rhoncus ac, pulvinar quis massa. Nulla auctor vel ipsum in fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eu interdum augue, nec fermentum mauris. Nulla eget pretium dui. Sed vulputate pretium aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut interdum justo.
+                    </p>
+                <h2>Second title </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor tortor ac urna sodales, non egestas neque mattis. Vestibulum ut aliquam sem. Donec ante magna, laoreet vitae rhoncus ac, pulvinar quis massa. Nulla auctor vel ipsum in fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eu interdum augue, nec fermentum mauris. Nulla eget pretium dui. Sed vulputate pretium aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut interdum justo.
+                </p>
+                    <h3>First subtitle</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor tortor ac urna sodales, non egestas neque mattis. Vestibulum ut aliquam sem. Donec ante magna, laoreet vitae rhoncus ac, pulvinar quis massa. Nulla auctor vel ipsum in fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eu interdum augue, nec fermentum mauris. Nulla eget pretium dui. Sed vulputate pretium aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut interdum justo.
+                    </p>
+                    <h3>Second subtitle</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor tortor ac urna sodales, non egestas neque mattis. Vestibulum ut aliquam sem. Donec ante magna, laoreet vitae rhoncus ac, pulvinar quis massa. Nulla auctor vel ipsum in fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eu interdum augue, nec fermentum mauris. Nulla eget pretium dui. Sed vulputate pretium aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut interdum justo.
+                    </p>
+                    <h4>First level 3</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor tortor ac urna sodales, non egestas neque mattis. Vestibulum ut aliquam sem. Donec ante magna, laoreet vitae rhoncus ac, pulvinar quis massa. Nulla auctor vel ipsum in fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eu interdum augue, nec fermentum mauris. Nulla eget pretium dui. Sed vulputate pretium aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut interdum justo.
+                    </p>
+                    <h4>Second level 3</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor tortor ac urna sodales, non egestas neque mattis. Vestibulum ut aliquam sem. Donec ante magna, laoreet vitae rhoncus ac, pulvinar quis massa. Nulla auctor vel ipsum in fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eu interdum augue, nec fermentum mauris. Nulla eget pretium dui. Sed vulputate pretium aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut interdum justo.
+                    </p>
+                    <h3>Third subtitle</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempor tortor ac urna sodales, non egestas neque mattis. Vestibulum ut aliquam sem. Donec ante magna, laoreet vitae rhoncus ac, pulvinar quis massa. Nulla auctor vel ipsum in fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eu interdum augue, nec fermentum mauris. Nulla eget pretium dui. Sed vulputate pretium aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut interdum justo.
+                    </p>
+            </div>
+        </div>
+
+
+        </div>
+        <!--Demo ends-->
+        
+        
+        <div id="copyright">Developed by Ángel Espro. For more information about this <a href="http://www.aesolucionesweb.com.ar/">jquery plugin and its developer, visit www.aesolucionesweb.com.ar</a></div>
+    </body>
+</html>
+        
