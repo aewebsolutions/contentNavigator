@@ -1,7 +1,7 @@
-# contentNavigator
-ContentNavigator is a JQuery plugin that generates a table of content or index from your page.
+# Content Navigator JQuery plugin
+ContentNavigator is a JQuery plugin that generates a table of content or index from a page.
 
-This plugin is realy helful when you have a documentation page, a manual page or whatever another long text. Just call the plugin and a table of content will be automatically creates.
+This plugin is realy helful when you have a documentation page, a manual page or whatever another long text. Just call the plugin and a table of content will be created automatically.
 
 ## Demos
 - Basics examples: https://rawgit.com/aewebsolutions/contentNavigator/master/demos/basic.html
